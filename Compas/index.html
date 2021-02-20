@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header1">
+            <div class="logo__content">
+                <div class="logo__image"></div>
+                <div class="logo__name">
+                    <div class="logo__name1">РЕКЛАМНОЕ АГЕНСТВО</div>
+                    <div class="logo__name2">КОМПАС</div>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="phone">
+                    <div class="phone1">+1312321321</div>
+                    <div class="phone1">+1313213213</div>
+                </div>
+                <div class="city">Тольятти</div>
+            </div>
+        </div>
+        <div class="header_menu">
+            <div class="menu_item">О компании</div>
+            <div class="menu_item">Партнеры</div>
+            <div class="menu_item">Дизайн и полиграфия</div>
+            <div class="menu_item">Сувенир и производство</div>
+            <div class="menu_item">Наружная реклама</div>
+            <div class="menu_item">Контакты</div>
+
+        </div>
+        <div class="about block">О компании</div>
+        <div class="partners block">Партнеры</div>
+        <div class="disaign block">Дизайн и полиграфия</div>
+        <div class="toy block">Сувенир и производство</div>
+        <div class="ad block">Наружная реклама</div>
+        <div class="contact1 block">Контакты</div>
+        <footer>Футер</footer>
+
+    </header>
+    <script>
+        let t  =document.querySelectorAll(".menu_item");
+        let q = document.querySelectorAll(".block");
+        console.log(window.scrollY);
+        let add =  t.forEach((item,i) => item.addEventListener('click',function(e) {
+            // window.scrollTo(0, getCoords(q[i]).top);
+            let scrollY = window.scrollY; 
+            let y = getCoords(q[i]).top,
+                dy =Math.max((y-scrollY)/300,10);
+            let t =  setInterval(()=>{
+                scrollY+=dy;
+                if(y-scrollY>dy) window.scrollTo(0, scrollY);
+                else {
+                    window.scrollTo(0,y);
+                    clearInterval(t)
+                }
+            },1)
+        } ));
+        function getCoords(elem) {
+        let box = elem.getBoundingClientRect();
+
+        return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset
+        };
+        }
+    
+</script>
+</body>
+
+
+</html>    

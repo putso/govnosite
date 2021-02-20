@@ -1,0 +1,107 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+div {
+    padding: 0;
+    margin: 0;
+}
+html {
+    padding: 0;
+    margin: 0;
+}
+.header1 {
+    background-color: blueviolet;
+    height: 300px;
+    width: 100%;
+    display: inline-flex;
+    color: aliceblue;
+}
+.logo__image {
+    background-image: url(../image/logo.png);
+    background-size:200px;
+    width: 200px;
+    height: 300px;
+    margin-top: -30px;
+}
+.logo__content {
+    display: inline-flex; 
+}
+.logo__name
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 70px;
+    font-size: 100px;
+    color: aliceblue;
+}
+.logo__name1 {
+    font-size: 30px;
+    
+}
+.contact {
+    padding: 10px;
+    margin-left: auto;
+    font-size: 20px;
+}
+.phone {
+    position: relative;
+}
+.phone::before {
+    position: absolute;
+    left: -46px;
+    top: 7px;
+    height: 39px;
+    width: 39px;
+    content: " ";
+    background-image: url(../image/НовыйХолст1\ 1.png);
+}
+.city {
+    font-size: 15px;
+}
+.header_menu {
+    display: flex; 
+    height: 100px;
+    width: 100%;
+    font-size: 1.5em;
+    flex-wrap: wrap;
+    height: min-content;
+}
+.menu_item
+{
+    padding-inline: 10px;
+    text-align: center;
+    flex-grow:5;
+    padding:20px;
+    height: 50px;
+    outline: solid 0px #FC5185;
+}
+.menu_item:hover
+{
+    outline-width: 2px;
+}
+.about {
+    height: 600px;
+    background-color: dodgerblue;
+    width: 100%;
+}
+.block {
+    width: 100%;
+    height: 500px;
+    font-size: 40px;
+    padding-top: 10px;
+}
+.disaign {
+    background-color:#EC9F8F;
+}
+.ad {
+    background-color: #DB76FF;
+}
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #DB76FF;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 40px;
+}
